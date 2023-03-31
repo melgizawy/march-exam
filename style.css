@@ -1,0 +1,200 @@
+*
+{
+  box-sizing: border-box;
+}
+
+body
+{
+  background-color: #009578;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */
+  margin: auto;
+  width: fit-content;
+
+}
+
+
+.kanban
+{
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  gap: 25px;
+}
+
+.column
+{
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: relative;
+  /* min-height: 300px; */
+  display: flex;
+  flex-direction: column;
+}
+
+h2
+{
+  margin-top: 0;
+  min-width: 250px;
+}
+
+.tasks
+{
+  min-height: 25px;
+}
+
+.task
+{
+  background: #f0f0f0;
+  color: black;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: move;
+  width: 100%;
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.is-dragging
+{
+  background-color: hsla(0, 100%, 50%, 0.377);
+}
+
+
+.dropzone
+{
+  height: 10px;
+  transition: background 0.15s, height 0.15s;
+}
+
+.dropzone--active
+{
+  height: 20px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.add-task
+{
+  margin-top: 10px;
+  min-height: 10px;
+  width: 100%;
+  font-weight: 500;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  background-color: var(--2-color);
+  padding: 1rem 2rem;
+  border: 2px solid #fff;
+  margin-top: auto;
+}
+
+.btn
+{
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+
+.task-text
+{
+  border: none;
+  padding: 0.9rem;
+  outline: none;
+  width: 100%;
+}
+
+
+/* .card
+{
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+  position: relative;
+} */
+
+.delete-btn,
+.edit-btn
+{
+  top: 10px;
+  cursor: pointer;
+}
+
+.delete-btn
+{
+  right: 10px;
+}
+
+.edit-btn
+{
+  right: 40px;
+}
+
+.icon-area
+{
+  display: flex;
+}
+
+.icon
+{
+  font-size: 1.6rem;
+  padding: 0.1rem;
+}
+
+.icon:hover
+{
+  color: #fff;
+}
+
+
+.btn-delete,
+.btn-edit
+{
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  color: var(--icon-edit);
+
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.btn-edit:hover
+{
+  background-color: var(--1-color);
+  color: #fff;
+}
+
+.btn-delete:hover
+{
+  background-color: var(--icon-delete);
+  color: #fff;
+}
+
+.icon
+{
+  font-size: 1.6rem;
+  padding: 0.1rem;
+}
+
+.icon:hover
+{
+  color: #fff;
+}
+
+.btn-add-task:hover
+{
+  background-color: var(--3-color);
+}
